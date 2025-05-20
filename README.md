@@ -68,4 +68,4 @@ This project is configured for easy deployment on platforms like Vercel, Netlify
 
 ## License
 
-Copyright © 2023 Survey 360 Research Solutions
+Copyright © 2025 Survey 360 Research Solutions

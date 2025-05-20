@@ -39,8 +39,6 @@ export default function RootLayout({
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <Link href="/about" className="hover:text-primary transition-colors">About</Link>
               <Link href="/services" className="hover:text-primary transition-colors">Services</Link>
-              <Link href="/projects" className="hover:text-primary transition-colors">Projects</Link>
-              <Link href="/resources" className="hover:text-primary transition-colors">Resources</Link>
               <Link href="/contact" className="hover:text-primary transition-colors">Contact</Link>
             </nav>
             <button className="md:hidden">
@@ -48,11 +46,11 @@ export default function RootLayout({
             </button>
           </div>
         </header>
-        
+
         <main className="flex-grow">
           {children}
         </main>
-        
+
         <footer className="bg-gray-900 text-white py-12">
           <div className="container-page">
             <div className="grid gap-8 md:grid-cols-4">
@@ -67,7 +65,6 @@ export default function RootLayout({
                 <ul className="space-y-2 text-gray-300">
                   <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
                   <li><Link href="/services" className="hover:text-primary transition-colors">Our Services</Link></li>
-                  <li><Link href="/projects" className="hover:text-primary transition-colors">Projects</Link></li>
                   <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
                 </ul>
               </div>
