@@ -64,10 +64,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-3">
-              <li><Link href="/services#research" className="text-gray-300 hover:text-primary transition-colors">Research Services</Link></li>
-              <li><Link href="/services#mentorship" className="text-gray-300 hover:text-primary transition-colors">Mentorship Programs</Link></li>
-              <li><Link href="/services#coaching" className="text-gray-300 hover:text-primary transition-colors">Business Coaching</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-primary transition-colors">View All Services</Link></li>
+              <li><Link href="/#services#research" className="text-gray-300 hover:text-primary transition-colors">Research Services</Link></li>
+              <li><Link href="/#services#mentorship" className="text-gray-300 hover:text-primary transition-colors">Mentorship Programs</Link></li>
+              <li><Link href="/#services#coaching" className="text-gray-300 hover:text-primary transition-colors">Business Coaching</Link></li>
+              <li><Link href="/#services" className="text-gray-300 hover:text-primary transition-colors">View All Services</Link></li>
             </ul>
           </div>
 
