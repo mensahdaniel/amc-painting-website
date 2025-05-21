@@ -64,12 +64,12 @@ const Publications = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Link href="/resources" className="inline-flex items-center justify-center border border-peach-500 text-peach-600 hover:bg-peach-50 transition-colors rounded-md px-6 py-3 font-medium">
             View All Resources
             <GoArrowRight className="ml-2 w-4 h-4" />
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
