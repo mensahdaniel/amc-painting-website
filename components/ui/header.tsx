@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 
-// adding header component
 
 export default function Header() {
   return (
