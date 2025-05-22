@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 // import {  FaInstagram } from "react-icons/fa";
-import { FaLinkedin, FaXTwitter, FaInstagram, FaLocationDot, FaPhp, FaPhone } from "react-icons/fa6";
+import { FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { FiFacebook } from "react-icons/fi";
 import { HiOutlinePhone } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
