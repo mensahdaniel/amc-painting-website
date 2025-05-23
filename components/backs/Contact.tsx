@@ -97,7 +97,7 @@ export default function ContactPage() {
                   <div className="flex items-start">
                     <IoLocationOutline className="text-peach-500 w-6 h-6 mt-1 flex-shrink-0" />
                     <div className="ml-4">
-                      <h3 className="font-medium text-gray-800">Address</h3>
+                      <h6 className="font-bold text-gray-800">Address</h6>
                       <p className="text-gray-600 mt-1">35 Avenue Street, Accra, Ghana</p>
                     </div>
                   </div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                   <div className="flex items-start">
                     <MdMailOutline className="text-peach-500 w-6 h-6 mt-1 flex-shrink-0" />
                     <div className="ml-4">
-                      <h3 className="font-medium text-gray-800">Email</h3>
+                      <h6 className="font-bold text-gray-800">Email</h6>
                       <a href="mailto:info@survey360research.org" className="text-gray-600 hover:text-peach-600 transition-colors mt-1 block">
                         info@survey360research.org
                       </a>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                   <div className="flex items-start">
                     <HiOutlinePhone className="text-peach-500 w-6 h-6 mt-1 flex-shrink-0" />
                     <div className="ml-4">
-                      <h3 className="font-medium text-gray-800">Phone</h3>
+                      <h6 className="font-bold text-gray-800">Phone</h6>
                       <a href="tel:+11234567890" className="text-gray-600 hover:text-peach-600 transition-colors mt-1 block">
                         +1 (123) 456-7890
                       </a>

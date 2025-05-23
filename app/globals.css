@@ -11,7 +11,8 @@
     --color-peach-200: oklch(0.90 0.07 14.82);
     --color-peach-300: oklch(0.85 0.09 14.82);
     --color-peach-400: oklch(0.77 0.12 14.82);
-    --color-peach-500: oklch(0.6867 0.1389 14.82); /* Main peach color */
+    --color-peach-500: oklch(0.6867 0.1389 14.82);
+    /* Main peach color */
     --color-peach-600: oklch(0.62 0.15 14.82);
     --color-peach-700: oklch(0.55 0.16 14.82);
     --color-peach-800: oklch(0.48 0.15 14.82);
@@ -115,12 +116,14 @@
     --card-foreground: #000000;
     --popover: #ffffff;
     --popover-foreground: #000000;
-    --primary: oklch(0.6867 0.1389 14.82); /* Peach-500 */
+    --primary: oklch(0.6867 0.1389 14.82);
+    /* Peach-500 */
     --primary-foreground: #ffffff;
     --secondary: #f7f7f7;
     /* Light gray */
     --secondary-foreground: #000000;
-    --accent: oklch(0.62 0.15 14.82); /* Peach-600 */
+    --accent: oklch(0.62 0.15 14.82);
+    /* Peach-600 */
     --accent-foreground: #ffffff;
     --muted: #f3f3f3;
     --muted-foreground: #6c6c6c;
@@ -129,7 +132,8 @@
     --destructive-foreground: #ffffff;
     --border: #e0e0e0;
     --input: #e0e0e0;
-    --ring: oklch(0.6867 0.1389 14.82); /* Peach-500 */
+    --ring: oklch(0.6867 0.1389 14.82);
+    /* Peach-500 */
 }
 
 .dark {
@@ -142,11 +146,13 @@
     --card-foreground: #ffffff;
     --popover: #1a1a1a;
     --popover-foreground: #ffffff;
-    --primary: oklch(0.6867 0.1389 14.82); /* Peach-500 */
+    --primary: oklch(0.6867 0.1389 14.82);
+    /* Peach-500 */
     --primary-foreground: #0f0f0f;
     --secondary: #2a2a2a;
     --secondary-foreground: #ffffff;
-    --accent: oklch(0.62 0.15 14.82); /* Peach-600 */
+    --accent: oklch(0.62 0.15 14.82);
+    /* Peach-600 */
     --accent-foreground: #ffffff;
     --muted: #2a2a2a;
     --muted-foreground: #a0a0a0;
@@ -155,7 +161,8 @@
     --destructive-foreground: #ffffff;
     --border: rgba(255, 255, 255, 0.1);
     --input: rgba(255, 255, 255, 0.1);
-    --ring: oklch(0.6867 0.1389 14.82); /* Peach-500 */
+    --ring: oklch(0.6867 0.1389 14.82);
+    /* Peach-500 */
 }
 
 @layer base {
@@ -178,16 +185,25 @@
     }
 
     h1 {
-        @apply text-4xl sm:text-5xl;
-    }
-
-    h2 {
         @apply text-3xl sm:text-4xl;
     }
 
-    h3 {
+    h2 {
         @apply text-2xl sm:text-3xl;
     }
+
+    h3 {
+        @apply text-xl sm:text-2xl;
+    }
+
+    h4 {
+        @apply text-lg sm:text-xl;
+    }
+
+    h5 {
+        @apply text-base sm:text-lg;
+    }
+
 }
 
 @utility button-brand {
