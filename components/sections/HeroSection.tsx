@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
-import { TbBuildingSkyscraper } from "react-icons/tb";
 
 const HeroSection = () => {
   return (
@@ -32,8 +32,14 @@ const HeroSection = () => {
             <div className="relative h-[450px] w-[400px]">
               <div className="absolute top-0 right-0 w-64 h-64 bg-peach-200 rounded-lg transform translate-x-8 -translate-y-4"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-peach-100 rounded-lg transform -translate-x-8 translate-y-4"></div>
-              <div className="absolute inset-4 z-10 shadow-xl rounded-lg overflow-hidden bg-peach-300 flex items-center justify-center">
-                <TbBuildingSkyscraper className="w-28 h-28 text-white" />
+              <div className="absolute inset-4 z-10 shadow-xl rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1742134516442-2f51982ce675?w=400&h=400&fit=crop&crop=center"
+                  alt="African research team collaborating on data analysis"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-peach-600/20"></div>
               </div>
             </div>
           </div>

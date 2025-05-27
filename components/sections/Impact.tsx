@@ -1,7 +1,18 @@
+import Image from "next/image";
+
 const Impact = () => {
   return (
-    <section className="py-24 bg-white">
-      <div className="container-page">
+    <section className="py-24 bg-white relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1200&h=800&fit=crop&crop=center"
+          alt="African community development and growth"
+          fill
+          className="object-cover opacity-5"
+        />
+      </div>
+      <div className="container-page relative z-10">
         <div className="text-center mb-16">
           <span className="text-peach-600 font-medium tracking-wider uppercase text-sm mb-2 inline-block">Making A Difference</span>
           <h2 className="text-peach-900 mb-4 text-3xl md:text-4xl font-serif">Our Measurable Impact</h2>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Testimonials = () => {
   return (
     <section className="py-24 bg-peach-50 relative overflow-hidden">
@@ -19,10 +21,13 @@ const Testimonials = () => {
               &ldquo;Survey 360 Research Solutions has been an invaluable partner in our community development initiatives. Their research insights and mentorship programs have transformed how we approach sustainable development.&rdquo;
             </p>
             <div className="flex items-center">
-              <div className="w-16 h-16 rounded-full bg-peach-200 flex items-center justify-center mr-4">
-                <svg className="w-10 h-10 text-peach-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
+              <div className="w-16 h-16 rounded-full overflow-hidden mr-4 relative">
+                <Image 
+                  src="https://images.unsplash.com/photo-1494790108755-2616b612b602?w=200&h=200&fit=crop&crop=face"
+                  alt="Dr. Sarah Johnson - Community Foundation Director"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div>
                 <h4 className="font-medium text-peach-800">Dr. Sarah Johnson</h4>

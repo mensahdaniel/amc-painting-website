@@ -1,15 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import {
   FaLightbulb,
   FaHandshake,
   FaBalanceScale,
-  FaGlobe,
-  FaChartLine
+  FaGlobe
 } from "react-icons/fa";
 import { IoMdPeople } from "react-icons/io";
 import { PiCertificateFill } from "react-icons/pi";
-import { BiSolidBriefcaseAlt2 } from "react-icons/bi";
+
 
 export const metadata: Metadata = {
   title: "About Us | Survey 360 Research Solutions",
@@ -23,25 +23,25 @@ export default function AboutPage() {
       name: "Dr. Amara Johnson",
       role: "Executive Director",
       bio: "Dr. Johnson has over 15 years of experience in research methodology and economic development. She holds a Ph.D. in Development Economics from Harvard University.",
-      image: "/team/placeholder-1.png"
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "Dr. Michael Chen",
       role: "Research Director",
       bio: "Dr. Chen specializes in quantitative research methods and has led numerous large-scale research projects across Africa and Asia. Ph.D. from Stanford University.",
-      image: "/team/placeholder-2.png"
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "Dr. Sarah Nkrumah",
       role: "Mentorship Program Lead",
       bio: "Dr. Nkrumah has dedicated her career to empowering young researchers through structured mentorship. She holds a Ph.D. in Education from University of Ghana.",
-      image: "/team/placeholder-3.png"
+      image: "https://images.unsplash.com/photo-1710778044102-56a3a6b69a1b?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "James Osei",
       role: "Business Coaching Director",
       bio: "With an MBA from INSEAD and 12 years of experience in business consulting, James leads our business coaching initiatives for startups and SMEs.",
-      image: "/team/placeholder-4.png"
+      image: "https://images.unsplash.com/photo-1533108344127-a586d2b02479?w=400&h=400&fit=crop&crop=face"
     }
   ];
 
@@ -78,14 +78,13 @@ export default function AboutPage() {
     }
   ];
 
-  const partners
- = [
-    { name: "Ghana Ministry of Education", logo: "/partners/placeholder-1.png" },
-    { name: "University of Ghana", logo: "/partners/placeholder-2.png" },
-    { name: "African Development Foundation", logo: "/partners/placeholder-3.png" },
-    { name: "Global Research Alliance", logo: "/partners/placeholder-4.png" },
-    { name: "UNICEF Ghana", logo: "/partners/placeholder-5.png" },
-    { name: "The World Bank", logo: "/partners/placeholder-6.png" }
+  const partners = [
+    { name: "Ghana Ministry of Education", logo: "/images/partners/MEG.jpg" },
+    { name: "University of Ghana", logo: "/images/partners/UG.png" },
+    { name: "African Development Foundation", logo: "/images/partners/ADF.png" },
+    { name: "Global Research Alliance", logo: "/images/partners/GRA.png" },
+    { name: "UNICEF Ghana", logo: "/images/partners/UNICEF.png" },
+    { name: "The World Bank", logo: "/images/partners/WB.jpg" }
   ];
 
   return (
@@ -129,8 +128,14 @@ export default function AboutPage() {
             <div className="relative h-[450px] rounded-lg overflow-hidden shadow-xl">
               <div className="absolute top-0 right-0 w-64 h-64 bg-peach-200 rounded-lg transform translate-x-8 -translate-y-4"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-peach-100 rounded-lg transform -translate-x-8 translate-y-4"></div>
-              <div className="absolute inset-4 z-10 shadow-xl rounded-lg overflow-hidden bg-peach-300 flex items-center justify-center">
-                <FaChartLine className="w-28 h-28 text-white" />
+              <div className="absolute inset-4 z-10 shadow-xl rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=600&h=400&fit=crop&crop=center"
+                  alt="African research team working together on innovation and development"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-peach-600/20"></div>
               </div>
             </div>
           </div>
@@ -189,15 +194,14 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all group">
-                <div className="h-60 bg-peach-200 relative flex items-center justify-center">
-                  <BiSolidBriefcaseAlt2 className="w-20 h-20 text-peach-500 absolute transition-all duration-300 group-hover:opacity-0" />
-                  {/* Uncomment when you have actual images */}
-                  {/* <Image 
-                    src={member.image} 
-                    alt={member.name} 
-                    fill 
-                    className="object-cover" 
-                  /> */}
+                <div className="h-60 relative">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-peach-600/10"></div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-peach-800">{member.name}</h3>
@@ -258,18 +262,17 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {partners.map((partner, index) => (
-              <div key={index} className="h-24 bg-gray-50 rounded-lg flex items-center justify-center p-4 hover:shadow-md transition-shadow">
-                <div className="text-center">
-                  {/* Uncomment when you have actual logos */}
-                  {/* <Image 
-                    src={partner.logo} 
-                    alt={partner.name} 
-                    width={120} 
-                    height={60} 
-                    className="object-contain h-12" 
-                  /> */}
-                  <p className="text-gray-700 text-sm mt-2">{partner.name}</p>
+              <div key={index} className="h-32 bg-gray-50 rounded-lg flex flex-col items-center justify-center p-4 hover:shadow-md transition-shadow">
+                <div className="relative w-16 h-12 mb-3 rounded overflow-hidden">
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-peach-600/10"></div>
                 </div>
+                <p className="text-gray-700 text-xs text-center leading-tight">{partner.name}</p>
               </div>
             ))}
           </div>

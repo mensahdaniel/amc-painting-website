@@ -1,8 +1,6 @@
 import Link from "next/link";
-import { FaRegFileLines } from "react-icons/fa6";
+import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
-import { IoPeopleSharp } from "react-icons/io5";
-import { MdBusinessCenter } from "react-icons/md";
 
 const Publications = () => {
   return (
@@ -19,8 +17,14 @@ const Publications = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <div className="h-48 bg-peach-200 relative flex items-center justify-center">
-              <FaRegFileLines className="text-4xl text-peach-600 w-16 h-16" />
+            <div className="h-48 relative">
+              <Image 
+                src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&h=400&fit=crop&crop=center"
+                alt="African researchers analyzing economic data and digital transformation"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-peach-600/10"></div>
             </div>
             <div className="p-6">
               <span className="text-peach-600 text-sm font-medium">Economic Research</span>
@@ -34,8 +38,14 @@ const Publications = () => {
           </div>
 
           <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <div className="h-48 bg-peach-200 relative flex items-center justify-center">
-              <IoPeopleSharp className="text-4xl text-peach-600 w-16 h-16" />
+            <div className="h-48 relative">
+              <Image 
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop&crop=center"
+                alt="African community mentorship and social development programs"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-peach-600/10"></div>
             </div>
             <div className="p-6">
               <span className="text-peach-600 text-sm font-medium">Social Development</span>
@@ -49,8 +59,14 @@ const Publications = () => {
           </div>
 
           <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <div className="h-48 bg-peach-200 relative flex items-center justify-center">
-              <MdBusinessCenter className="text-4xl text-peach-600 w-16 h-16" />
+            <div className="h-48 relative">
+              <Image 
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop&crop=center"
+                alt="African business professionals developing strategic resilience plans"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-peach-600/10"></div>
             </div>
             <div className="p-6">
               <span className="text-peach-600 text-sm font-medium">Business Strategy</span>

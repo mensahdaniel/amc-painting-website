@@ -1,8 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const CTASection = () => {
   return (
     <section className="py-20 bg-peach-700 text-white relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&h=800&fit=crop&crop=center"
+          alt="African team collaborating and transforming research capabilities"
+          fill
+          className="object-cover opacity-20"
+        />
+      </div>
       <div className="absolute inset-0 z-0 opacity-10">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>

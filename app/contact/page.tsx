@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Metadata } from "next";
 import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
+import Image from "next/image";
 import { FiFacebook } from "react-icons/fi";
 import { HiOutlinePhone } from "react-icons/hi2";
 import { MdMailOutline } from "react-icons/md";
@@ -22,6 +23,15 @@ export default function ContactPage() {
 
     <>
       <section className="relative py-16 md:py-24 bg-peach-50 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop&crop=center"
+            alt="Modern African office environment with professional team"
+            fill
+            className="object-cover opacity-10"
+          />
+        </div>
         <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#f07316 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
         <div className="container-page relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -90,6 +100,15 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div>
               <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-100 mb-8">
+                <div className="relative h-48 mb-6 rounded-lg overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1742134516442-2f51982ce675?w=600&h=400&fit=crop&crop=center"
+                    alt="African business office environment and team collaboration"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-peach-600/20"></div>
+                </div>
                 <h2 className="text-2xl font-semibold text-peach-800 mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   <div className="flex items-start">
