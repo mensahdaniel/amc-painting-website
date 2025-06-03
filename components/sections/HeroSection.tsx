@@ -16,12 +16,12 @@ const HeroSection = () => {
       {/* Enhanced Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-peach-50 via-white to-orange-50"></div>
       <div className="absolute inset-0 opacity-5">
-        <div style={{ 
-          backgroundImage: 'radial-gradient(circle at 25% 25%, #f97316 2px, transparent 2px), radial-gradient(circle at 75% 75%, #f97316 1px, transparent 1px)', 
-          backgroundSize: '60px 60px, 30px 30px' 
+        <div style={{
+          backgroundImage: 'radial-gradient(circle at 25% 25%, #f97316 2px, transparent 2px), radial-gradient(circle at 75% 75%, #f97316 1px, transparent 1px)',
+          backgroundSize: '60px 60px, 30px 30px'
         }} className="w-full h-full"></div>
       </div>
-      
+
       {/* Floating elements */}
       <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-peach-400 rounded-full animate-ping"></div>
       <div className="absolute bottom-1/3 right-1/4 w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
@@ -49,22 +49,22 @@ const HeroSection = () => {
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed font-light">
-              Empowering individuals and institutions through <strong className="text-peach-600">evidence-based research</strong>, 
+              Empowering individuals and institutions through <strong className="text-peach-600">evidence-based research</strong>,
               strategic mentorship, and transformative business coaching.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Link 
-                href="/services" 
+              <Link
+                href="/services"
                 className="group bg-gradient-to-r from-peach-600 to-orange-600 text-white hover:from-peach-700 hover:to-orange-700 rounded-xl px-8 py-4 font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-xl hover:shadow-2xl hover:scale-105"
               >
                 <span>Explore Our Services</span>
                 <GoArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              
-              <Link 
-                href="/about" 
+
+              <Link
+                href="/about"
                 className="group bg-white/90 backdrop-blur-sm border-2 border-peach-300 text-peach-700 hover:bg-peach-50 rounded-xl px-8 py-4 font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl"
               >
                 <FaPlay className="mr-2 w-4 h-4" />
@@ -94,17 +94,17 @@ const HeroSection = () => {
               {/* Background shapes */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-peach-200 to-orange-200 rounded-3xl transform rotate-12 opacity-60"></div>
               <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-blue-100 to-peach-100 rounded-3xl transform -rotate-12 opacity-60"></div>
-              
+
               {/* Main image container */}
               <div className="absolute inset-8 z-10 shadow-2xl rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-500">
                 <Image
-                  src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=600&h=700&fit=crop&crop=center"
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=800&fit=crop&crop=center"
                   alt="African research team collaborating on data analysis"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-peach-900/40 via-transparent to-transparent"></div>
-                
+
                 {/* Floating card */}
                 <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
                   <h3 className="font-bold text-gray-900 mb-2">Research Excellence</h3>
@@ -116,7 +116,7 @@ const HeroSection = () => {
               <div className="absolute top-16 left-4 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 animate-bounce">
                 <FaChartLine className="w-6 h-6 text-peach-600" />
               </div>
-              
+
               <div className="absolute bottom-32 right-4 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 animate-pulse">
                 <FaUsers className="w-6 h-6 text-orange-600" />
               </div>
