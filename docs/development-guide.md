@@ -8,6 +8,17 @@ This document serves as a comprehensive guide for developing the Survey 360 Rese
 
 Survey 360 Research Solutions is a not-for-profit research and development organization dedicated to advancing knowledge and empowering individuals and institutions through evidence-based research, mentorship, and business coaching.
 
+## Contact details:
+Survey 360 Research Solutions
+105 Eastwood Avenue
+Off Lake Bosomtwe Road
+Atonsu-Monaco, Kumasi
+Ghana
+
+Our Contacts:
+TEL: 0322494556/0550102130
+EMAIL: info@survey360.org
+
 ### Brand Colors
 - **Primary**: Peach (OKLCH: 0.6867 0.1389 14.82)
 - **Secondary**: White (HEX: #FFFFFF)

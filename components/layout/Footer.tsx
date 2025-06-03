@@ -1,129 +1,170 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-// import {  FaInstagram } from "react-icons/fa";
 import { FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { FiFacebook } from "react-icons/fi";
-import { HiOutlinePhone } from "react-icons/hi2";
-import { IoLocationOutline } from "react-icons/io5";
-import { MdMailOutline } from "react-icons/md";
-
+// import { HiOutlinePhone, HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
+import { FaChartLine, FaUsers, FaBriefcase, FaArrowRight } from "react-icons/fa";
+import { HiSparkles } from "react-icons/hi";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const services = [
+    { name: "Research Services", href: "/services/research", icon: <FaChartLine className="w-4 h-4" /> },
+    { name: "Mentorship Programs", href: "/services/mentorship", icon: <FaUsers className="w-4 h-4" /> },
+    { name: "Business Coaching", href: "/services/coaching", icon: <FaBriefcase className="w-4 h-4" /> }
+  ];
+
+  const quickLinks = [
+    { name: "About Us", href: "/about" },
+    { name: "Our Team", href: "/about#team" },
+    { name: "Our Impact", href: "/about#impact" },
+    { name: "Contact", href: "/contact" }
+  ];
+
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
-      <div className="container-page">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* Logo and About */}
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-peach-900 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div style={{
+          backgroundImage: 'radial-gradient(circle at 25% 25%, #ffffff 1px, transparent 1px), radial-gradient(circle at 75% 75%, #ffffff 0.5px, transparent 0.5px)',
+          backgroundSize: '40px 40px, 20px 20px'
+        }} className="w-full h-full"></div>
+      </div>
+
+      {/* Main Footer Content */}
+      <div className="container-page relative z-10 pt-20 pb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
+
+          {/* Company Information */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
               <Image
                 src="/survey360light.png"
                 alt="Survey 360 Research Solutions"
-                width={160}
-                height={160}
-                className="h-14 aspect-3/2 object-contain"
+                width={180}
+                height={60}
+                className="h-14 w-auto object-contain"
               />
             </Link>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Survey 360 Research Solutions is a not-for-profit research and development organization
-              dedicated to advancing knowledge and empowering individuals and institutions through
-              evidence-based research, mentorship, and business coaching.
+
+            <p className="text-gray-300 mb-8 text-lg leading-relaxed max-w-lg">
+              A not-for-profit research and development organization dedicated to advancing knowledge and empowering individuals and institutions through evidence-based research, mentorship, and business coaching.
             </p>
+
+            {/* Mission Statement */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
+              <div className="flex items-center mb-3">
+                <HiSparkles className="w-5 h-5 text-peach-400 mr-2" />
+                <h4 className="font-semibold text-white">Our Mission</h4>
+              </div>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                To advance knowledge and empower individuals through high-quality, evidence-based research and strategic development programs.
+              </p>
+            </div>
+
+            {/* Social Media */}
             <div className="flex space-x-4">
-              <Link href="https://twitter.com" className="text-gray-300 hover:text-primary transition-colors" aria-label="Twitter">
-                <FaXTwitter className="h-6 w-6" />
+              <Link
+                href="https://twitter.com"
+                className="group w-12 h-12 bg-white/10 hover:bg-peach-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
+                aria-label="Twitter"
+              >
+                <FaXTwitter className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </Link>
-              <Link href="https://linkedin.com" className="text-gray-300 hover:text-primary transition-colors" aria-label="LinkedIn">
-                <FaLinkedin className="h-6 w-6" />
+              <Link
+                href="https://linkedin.com"
+                className="group w-12 h-12 bg-white/10 hover:bg-peach-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </Link>
-              <Link href="https://facebook.com" className="text-gray-300 hover:text-primary transition-colors" aria-label="Facebook">
-                <FiFacebook className="h-6 w-6" />
+              <Link
+                href="https://facebook.com"
+                className="group w-12 h-12 bg-white/10 hover:bg-peach-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
+                aria-label="Facebook"
+              >
+                <FiFacebook className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </Link>
-              <Link href="https://instagram.com" className="text-gray-300 hover:text-primary transition-colors" aria-label="Instagram">
-                <FaInstagram className="h-6 w-6" />
+              <Link
+                href="https://instagram.com"
+                className="group w-12 h-12 bg-white/10 hover:bg-peach-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </Link>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-3">
-              <li><Link href="/about" className="text-gray-300 hover:text-primary transition-colors">About</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-primary transition-colors">Services</Link></li>
-              {/* <li><Link href="/projects" className="text-gray-300 hover:text-primary transition-colors">Projects</Link></li> */}
-              {/* <li><Link href="/resources" className="text-gray-300 hover:text-primary transition-colors">Resources</Link></li> */}
-              <li><Link href="/contact" className="text-gray-300 hover:text-primary transition-colors">Contact</Link></li>
+            <h3 className="text-xl font-bold mb-6 text-white">Quick Links</h3>
+            <ul className="space-y-4">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="group flex items-center text-gray-300 hover:text-peach-300 transition-all duration-300"
+                  >
+                    <FaArrowRight className="w-3 h-3 mr-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                    <span className="group-hover:translate-x-2 transition-transform duration-300">{link.name}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-3">
-              <li><Link href="/#services#research" className="text-gray-300 hover:text-primary transition-colors">Research Services</Link></li>
-              <li><Link href="/#services#mentorship" className="text-gray-300 hover:text-primary transition-colors">Mentorship Programs</Link></li>
-              <li><Link href="/#services#coaching" className="text-gray-300 hover:text-primary transition-colors">Business Coaching</Link></li>
-              <li><Link href="/#services" className="text-gray-300 hover:text-primary transition-colors">View All Services</Link></li>
+            <h3 className="text-xl font-bold mb-6 text-white">Our Services</h3>
+            <ul className="space-y-4">
+              {services.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    href={service.href}
+                    className="group flex items-center text-gray-300 hover:text-peach-300 transition-all duration-300"
+                  >
+                    <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-peach-500 transition-all duration-300">
+                      {service.icon}
+                    </div>
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">{service.name}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>
 
-          {/* Newsletter */}
-          {/* <div>
-            <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-            <p className="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
-            <form className="space-y-3">
-              <div>
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="w-full px-4 py-2 text-gray-400 rounded-md focus:outline-none ring-2 focus:ring-2 focus:ring-primary focus:text-white"
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full px-4 py-2 text-white font-medium bg-primary hover:bg-opacity-90 rounded-md transition-colors"
+            {/* CTA */}
+            <div className="mt-8">
+              <Link
+                href="/services"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-peach-500 to-orange-500 text-white font-semibold rounded-xl hover:from-peach-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl group"
               >
-                Subscribe
-              </button>
-            </form>
-          </div> */}
-        </div>
-
-        {/* Contact Information */}
-        <div className="border-t border-gray-700 pt-8 pb-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="flex items-center">
-              <IoLocationOutline className="text-peach-500 w-6 h-6" />
-              <span className="text-gray-300">35 Avenue Street, Accra, Ghana</span>
-            </div>
-            <div className="flex items-center">
-              <MdMailOutline className="text-peach-500 w-6 h-6" />
-              <a href="mailto:info@survey360research.org" className="text-gray-300 hover:text-primary transition-colors">info@survey360research.org</a>
-            </div>
-            <div className="flex items-center">
-              <HiOutlinePhone className="text-peach-500 w-6 h-6" />
-              <a href="tel:+11234567890" className="text-gray-300 hover:text-primary transition-colors">+233 (55) 000-0000</a>
+                <span>View All Services</span>
+                <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-gray-700 pt-6 text-center">
-          <p className="text-gray-400 text-sm">
-            © {currentYear} Survey 360 Research Solutions. All rights reserved. | A not-for-profit research organization
-          </p>
-          {/* <div className="mt-2 space-x-4 text-sm">
-            <Link href="/privacy-policy" className="text-gray-400 hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="text-gray-400 hover:text-primary transition-colors">Terms of Service</Link>
-            <Link href="/sitemap" className="text-gray-400 hover:text-primary transition-colors">Sitemap</Link>
-          </div> */}
+
+
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © {currentYear} Survey 360 Research Solutions. All rights reserved.
+            </div>
+            <div className="text-gray-400 text-sm">
+              A not-for-profit research and development organization
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Decorative Elements */}
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-peach-500/10 to-transparent rounded-full -translate-x-32 translate-y-32 blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-orange-500/10 to-transparent rounded-full translate-x-48 -translate-y-48 blur-3xl"></div>
     </footer>
   );
 };

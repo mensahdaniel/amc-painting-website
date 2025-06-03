@@ -5,11 +5,13 @@ import {
   FaLightbulb,
   FaHandshake,
   FaBalanceScale,
-  FaGlobe
+  FaGlobe,
+  FaBookOpen
 } from "react-icons/fa";
 import { IoMdPeople } from "react-icons/io";
 import { PiCertificateFill } from "react-icons/pi";
-
+import { HiAcademicCap } from "react-icons/hi";
+import { GoArrowRight } from "react-icons/go";
 
 export const metadata: Metadata = {
   title: "About Us | Survey 360 Research Solutions",
@@ -20,161 +22,205 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: "Dr. Amara Johnson",
-      role: "Executive Director",
-      bio: "Dr. Johnson has over 15 years of experience in research methodology and economic development. She holds a Ph.D. in Development Economics from Harvard University.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face"
+      name: "Dr. Angela Kyerewaa Ayisi-Addo",
+      role: "Head of Operations (Training and Field Works)",
+      bio: "Angela holds a Ph.D. in Adult Education & Human Resource studies (University of Ghana), MPhil in Adult Education (University of Ghana), BA in Philosophy & History (University of Ghana) and a Diploma in Human Resource Management. Angela also studied as a DAAD scholar at the Julius Maximillian University of Wurzburg, Germany.",
+      image: "/images/team/angela.png",
+      specializations: ["Adult Education", "Human Resource Studies", "Training & Development"],
+      education: ["Ph.D. in Adult Education & Human Resource Studies - University of Ghana", "DAAD Scholar - Julius Maximillian University of Wurzburg, Germany"]
     },
     {
-      name: "Dr. Michael Chen",
-      role: "Research Director",
-      bio: "Dr. Chen specializes in quantitative research methods and has led numerous large-scale research projects across Africa and Asia. Ph.D. from Stanford University.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+      name: "Dr. Michael Karikari Appiah",
+      role: "Director of Operations",
+      bio: "As an accomplished Scholar, Dr. Karikari obtained his Doctor of Philosophy (Ph. D) Degree from the University Malaysia, Terengganu, a Master of Science (MSc.) from Coventry University (United Kingdom), a Commonwealth Executive Master's in Public Administration (CEMPA) from KNUST, Post Graduate Diploma from GIMPA, and a Bachelor of Art Degree from the University for Development Studies (UDS, Tamale).",
+      image: "/images/team/michael.png",
+      specializations: ["Public Administration", "Research Management", "Academic Publishing"],
+      education: ["Ph.D. - University Malaysia, Terengganu", "MSc. - Coventry University (UK)", "CEMPA - KNUST"],
+      publications: "50+ articles in high-impact journals including Emerald, Elsevier, Sage, and Taylor & Francis"
     },
     {
-      name: "Dr. Sarah Nkrumah",
-      role: "Mentorship Program Lead",
-      bio: "Dr. Nkrumah has dedicated her career to empowering young researchers through structured mentorship. She holds a Ph.D. in Education from University of Ghana.",
-      image: "https://images.unsplash.com/photo-1710778044102-56a3a6b69a1b?w=400&h=400&fit=crop&crop=face"
-    },
-    {
-      name: "James Osei",
-      role: "Business Coaching Director",
-      bio: "With an MBA from INSEAD and 12 years of experience in business consulting, James leads our business coaching initiatives for startups and SMEs.",
-      image: "https://images.unsplash.com/photo-1533108344127-a586d2b02479?w=400&h=400&fit=crop&crop=face"
+      name: "Deborah Amoako",
+      role: "Head of Human Resources and Audit",
+      bio: "Deborah Amoako is a seasoned professional with over 15 years of experience in Human Resources and Audit. She holds a Bachelor of Business Administration (BBA) degree in Human Resource Management from the University of Ghana, and a Master of Science (MSc) in Management and Human Resource Strategy from KNUST.",
+      image: "/images/team/deborah.png",
+      specializations: ["Human Resource Management", "Audit & Compliance", "Organizational Development"],
+      education: ["MSc. in Management and Human Resource Strategy - KNUST", "BBA in Human Resource Management - University of Ghana"],
+      experience: "15+ years across Ghana Education Service, Ghana Police Service, and Ghana Revenue Authority"
     }
   ];
 
   const values = [
     {
-      icon: <FaLightbulb className="w-12 h-12 text-peach-500" />,
+      icon: <FaLightbulb className="w-8 h-8 text-peach-500" />,
       title: "Excellence",
-      description: "We pursue the highest standards in our research methodologies, mentorship programs, and business coaching services."
+      description: "We pursue the highest standards in our research methodologies, mentorship programs, and business coaching services.",
+      gradient: "from-peach-50 to-orange-50"
     },
     {
-      icon: <FaHandshake className="w-12 h-12 text-peach-500" />,
+      icon: <FaHandshake className="w-8 h-8 text-peach-500" />,
       title: "Collaboration",
-      description: "We believe in the power of partnerships and collaborative approaches to solving complex problems."
+      description: "We believe in the power of partnerships and collaborative approaches to solving complex problems.",
+      gradient: "from-blue-50 to-peach-50"
     },
     {
-      icon: <FaBalanceScale className="w-12 h-12 text-peach-500" />,
+      icon: <FaBalanceScale className="w-8 h-8 text-peach-500" />,
       title: "Integrity",
-      description: "We uphold the highest ethical standards in our research, mentorship, and coaching practices."
+      description: "We uphold the highest ethical standards in our research, mentorship, and coaching practices.",
+      gradient: "from-green-50 to-peach-50"
     },
     {
-      icon: <IoMdPeople className="w-12 h-12 text-peach-500" />,
+      icon: <IoMdPeople className="w-8 h-8 text-peach-500" />,
       title: "Inclusivity",
-      description: "We are committed to diversity, equity, and inclusion in all aspects of our work."
+      description: "We are committed to diversity, equity, and inclusion in all aspects of our work.",
+      gradient: "from-purple-50 to-peach-50"
     },
     {
-      icon: <FaGlobe className="w-12 h-12 text-peach-500" />,
-      title: "Impact",
-      description: "We measure our success by the positive change we create in communities and organizations."
+      icon: <FaGlobe className="w-8 h-8 text-peach-500" />,
+      title: "Global Impact",
+      description: "We measure our success by the positive change we create in communities and organizations worldwide.",
+      gradient: "from-teal-50 to-peach-50"
     },
     {
-      icon: <PiCertificateFill className="w-12 h-12 text-peach-500" />,
+      icon: <PiCertificateFill className="w-8 h-8 text-peach-500" />,
       title: "Evidence-Based",
-      description: "We ground our work in rigorous research and data-driven insights."
+      description: "We ground our work in rigorous research and data-driven insights for sustainable solutions.",
+      gradient: "from-indigo-50 to-peach-50"
     }
   ];
 
   const partners = [
-    { name: "Ghana Ministry of Education", logo: "/images/partners/MEG.jpg" },
-    { name: "University of Ghana", logo: "/images/partners/UG.png" },
-    { name: "African Development Foundation", logo: "/images/partners/ADF.png" },
-    { name: "Global Research Alliance", logo: "/images/partners/GRA.png" },
-    { name: "UNICEF Ghana", logo: "/images/partners/UNICEF.png" },
-    { name: "The World Bank", logo: "/images/partners/WB.jpg" }
+    { name: "University of Ghana", logo: "https://images.unsplash.com/photo-1562774053-701939374585?w=100&h=80&fit=crop&crop=center" },
+    { name: "KNUST", logo: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=100&h=80&fit=crop&crop=center" },
+    { name: "Coventry University", logo: "https://images.unsplash.com/photo-1568792923760-d70635a89fdc?w=100&h=80&fit=crop&crop=center" },
+    { name: "University Malaysia", logo: "https://images.unsplash.com/photo-1591040248420-3066d1c1b4d3?w=100&h=80&fit=crop&crop=center" },
+    { name: "GIMPA", logo: "https://images.unsplash.com/photo-1574932142425-67da20c5b6ba?w=100&h=80&fit=crop&crop=center" },
+    { name: "Ghana Education Service", logo: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=100&h=80&fit=crop&crop=center" }
+  ];
+
+  const milestones = [
+    { year: "2015", title: "Foundation", description: "Survey 360 Research Solutions was established with a mission to advance knowledge through research." },
+    { year: "2017", title: "First Major Research", description: "Completed our first comprehensive community development research project." },
+    { year: "2019", title: "Mentorship Launch", description: "Launched our flagship mentorship program for young researchers and entrepreneurs." },
+    { year: "2021", title: "Business Coaching", description: "Expanded services to include business coaching for SMEs and startups." },
+    { year: "2023", title: "International Recognition", description: "Received recognition for outstanding contribution to research and development." }
   ];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 bg-peach-50 overflow-hidden">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#f97316 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-peach-50 via-white to-orange-50"></div>
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, #f97316 2px, transparent 2px), radial-gradient(circle at 75% 75%, #f97316 1px, transparent 1px)', backgroundSize: '50px 50px, 25px 25px' }}></div>
+
         <div className="container-page relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="text-peach-600 font-medium tracking-wider uppercase text-sm mb-3 inline-block">About Us</span>
-            <h1 className="text-peach-900 mb-6 text-4xl md:text-5xl font-serif leading-tight">
-              Advancing Knowledge Through <span className="text-peach-600">Evidence-Based</span> Research
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center px-4 py-2 bg-peach-100 rounded-full text-peach-700 font-medium text-sm mb-6">
+              <FaBookOpen className="w-4 h-4 mr-2" />
+              About Survey 360 Research Solutions
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Empowering Through
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-peach-600 to-orange-600"> Knowledge</span>
             </h1>
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Survey 360 Research Solutions is dedicated to empowering individuals and institutions through cutting-edge research, mentorship, and business coaching.
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+              We are a not-for-profit research and development organization dedicated to advancing knowledge and empowering individuals and institutions through evidence-based research, mentorship, and business coaching.
             </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/services" className="bg-peach-500 text-white hover:bg-peach-500/90 rounded-lg px-8 py-4 font-semibold transition-all duration-300 inline-flex items-center group shadow-lg hover:shadow-xl">
+                <span>Our Services</span>
+                <GoArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link href="/contact" className="bg-white border-2 border-peach-300 text-peach-600 hover:bg-peach-50 rounded-lg px-8 py-4 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
+                Get In Touch
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Our Story Section */}
+      {/* Mission, Vision & Values */}
       <section className="py-20 bg-white">
         <div className="container-page">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="text-peach-600 font-medium tracking-wider uppercase text-sm mb-2 inline-block">Our Story</span>
-              <h2 className="text-peach-900 mb-6 text-3xl md:text-4xl font-serif">A Journey of Impact and Innovation</h2>
-              <div className="w-20 h-1 bg-peach-500 mb-6"></div>
-              <div className="prose text-gray-700">
-                <p className="mb-4">
-                  Founded in 2015, Survey 360 Research Solutions emerged from a vision to bridge the gap between academic research and practical application in African communities and beyond.
-                </p>
-                <p className="mb-4">
-                  What began as a small team of dedicated researchers has grown into a comprehensive not-for-profit organization with a global reach, collaborating with governments, academic institutions, NGOs, and businesses to drive positive change through evidence-based approaches.
-                </p>
-                <p>
-                  Our journey has been marked by a commitment to excellence, integrity, and meaningful impact. Over the years, we have expanded our focus from purely research-based initiatives to include structured mentorship programs and business coaching services, creating a holistic approach to knowledge advancement and capacity building.
-                </p>
+          <div className="grid lg:grid-cols-3 gap-12 mb-20">
+            {/* Mission */}
+            <div className="text-center lg:text-left">
+              <div className="w-16 h-16 bg-gradient-to-br from-peach-500 to-orange-500/50 rounded-xl flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                <FaLightbulb className="w-8 h-8 text-white" />
               </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+              <p className="text-gray-600 leading-relaxed">
+                To advance knowledge and empower individuals and institutions through high-quality, evidence-based research, comprehensive mentorship programs, and strategic business coaching services.
+              </p>
             </div>
-            <div className="relative h-[450px] rounded-lg overflow-hidden shadow-xl">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-peach-200 rounded-lg transform translate-x-8 -translate-y-4"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-peach-100 rounded-lg transform -translate-x-8 translate-y-4"></div>
-              <div className="absolute inset-4 z-10 shadow-xl rounded-lg overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=600&h=400&fit=crop&crop=center"
-                  alt="African research team working together on innovation and development"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-peach-600/20"></div>
+
+            {/* Vision */}
+            <div className="text-center lg:text-left">
+              <div className="w-16 h-16 bg-gradient-to-br from-peach-500 to-orange-500/50 rounded-xl flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                <FaGlobe className="w-8 h-8 text-white" />
               </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+              <p className="text-gray-600 leading-relaxed">
+                To be a leading catalyst for positive change through research excellence, fostering innovation, and building capacity across communities and organizations globally.
+              </p>
             </div>
+
+            {/* Impact */}
+            <div className="text-center lg:text-left">
+              <div className="w-16 h-16 bg-gradient-to-br from-peach-500 to-orange-500/50 rounded-xl flex items-center justify-center mx-auto lg:mx-0 mb-6">
+                <IoMdPeople className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Impact</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Creating sustainable solutions that bridge the gap between research and practice, fostering growth, and empowering the next generation of leaders and innovators.
+              </p>
+            </div>
+          </div>
+
+          {/* Values Grid */}
+          <div className="text-center mb-16">
+            <span className="text-peach-600 font-semibold tracking-wider uppercase text-sm mb-2 inline-block">Core Values</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Drives Us Forward</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-peach-500 to-orange-500 mx-auto mb-6 rounded-full"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className={`bg-gradient-to-br ${value.gradient} p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group`}>
+                <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {value.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Mission, Vision, Values Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Journey Timeline */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-peach-50">
         <div className="container-page">
           <div className="text-center mb-16">
-            <span className="text-peach-600 font-medium tracking-wider uppercase text-sm mb-2 inline-block">Guiding Principles</span>
-            <h2 className="text-peach-900 mb-4 text-3xl md:text-4xl font-serif">Our Mission, Vision & Values</h2>
-            <div className="w-20 h-1 bg-peach-500 mx-auto mb-6"></div>
+            <span className="text-peach-600 font-semibold tracking-wider uppercase text-sm mb-2 inline-block">Our Journey</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Milestones & Growth</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-peach-500 to-orange-500 mx-auto mb-6 rounded-full"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-peach-500">
-              <h3 className="text-2xl font-semibold text-peach-800 mb-4">Our Mission</h3>
-              <p className="text-gray-700 leading-relaxed">
-                To advance knowledge and empower individuals and institutions through evidence-based research, mentorship, and business coaching, creating sustainable solutions for complex societal challenges.
-              </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-8">
+              {milestones.map((milestone, index) => (
+                <div key={index} className="flex items-start group">
+                  <div className="flex-shrink-0 w-24 text-right mr-8">
+                    <span className="text-2xl font-bold text-peach-600">{milestone.year}</span>
+                  </div>
+                  <div className="flex-shrink-0 w-4 h-4 bg-peach-500 rounded-full mt-2 mr-8 group-hover:scale-125 transition-transform duration-300"></div>
+                  <div className="flex-1 pb-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{milestone.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-peach-500">
-              <h3 className="text-2xl font-semibold text-peach-800 mb-4">Our Vision</h3>
-              <p className="text-gray-700 leading-relaxed">
-                A world where evidence-based research drives decision-making at all levels, where mentorship bridges knowledge gaps, and where businesses thrive through informed strategies, collectively contributing to equitable and sustainable development.
-              </p>
-            </div>
-          </div>
-
-          <h3 className="text-2xl font-semibold text-peach-800 mb-8 text-center">Our Core Values</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="mb-4">{value.icon}</div>
-                <h4 className="text-xl font-semibold text-peach-700 mb-2">{value.title}</h4>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -183,30 +229,71 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container-page">
           <div className="text-center mb-16">
-            <span className="text-peach-600 font-medium tracking-wider uppercase text-sm mb-2 inline-block">Our People</span>
-            <h2 className="text-peach-900 mb-4 text-3xl md:text-4xl font-serif">Leadership Team</h2>
-            <div className="w-20 h-1 bg-peach-500 mx-auto mb-6"></div>
-            <p className="max-w-2xl mx-auto text-gray-600 text-lg">
-              Our diverse team of experts brings together decades of experience in research, education, mentorship, and business development.
+            <span className="text-peach-600 font-semibold tracking-wider uppercase text-sm mb-2 inline-block">Our Team</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Leadership Excellence</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-peach-500 to-orange-500 mx-auto mb-6 rounded-full"></div>
+            <p className="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">
+              Our leadership team brings together decades of experience in research, education, human resources, and organizational development, driving our mission forward with expertise and passion.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid lg:grid-cols-3 gap-12">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all group">
-                <div className="h-60 relative">
+              <div key={index} className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-gray-100">
+                <div className="h-80 relative overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover transition-all duration-300 group-hover:scale-105"
+                    className="object-cover transition-all duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-peach-600/10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-peach-800">{member.name}</h3>
-                  <p className="text-peach-600 mb-3">{member.role}</p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
+
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-peach-600 font-semibold mb-4">{member.role}</p>
+
+                  {member.publications && (
+                    <div className="mb-4 p-3 bg-gradient-to-r from-green-50 to-peach-50 rounded-lg">
+                      <p className="text-sm text-gray-700 font-medium">{member.publications}</p>
+                    </div>
+                  )}
+
+                  {member.experience && (
+                    <div className="mb-4 p-3 bg-gradient-to-r from-blue-50 to-peach-50 rounded-lg">
+                      <p className="text-sm text-gray-700 font-medium">{member.experience}</p>
+                    </div>
+                  )}
+
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">{member.bio}</p>
+
+                  {member.specializations && (
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Specializations:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {member.specializations.map((spec, specIndex) => (
+                          <span key={specIndex} className="px-3 py-1 bg-peach-100 text-peach-700 text-xs rounded-full font-medium">
+                            {spec}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {member.education && (
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-900 mb-2 flex items-center">
+                        <HiAcademicCap className="w-4 h-4 mr-1" />
+                        Key Education:
+                      </h4>
+                      <ul className="space-y-1">
+                        {member.education.map((edu, eduIndex) => (
+                          <li key={eduIndex} className="text-xs text-gray-600 leading-relaxed">• {edu}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -214,97 +301,94 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Governance Structure */}
-      <section className="py-20 bg-gray-50">
+      {/* Contact Information */}
+      <section className="py-20 bg-gradient-to-br from-peach-600 to-orange-600 text-white">
         <div className="container-page">
-          <div className="text-center mb-16">
-            <span className="text-peach-600 font-medium tracking-wider uppercase text-sm mb-2 inline-block">Organizational Structure</span>
-            <h2 className="text-peach-900 mb-4 text-3xl md:text-4xl font-serif">Governance</h2>
-            <div className="w-20 h-1 bg-peach-500 mx-auto mb-6"></div>
-          </div>
-
-          <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-            <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-peach-800 mb-4">Board of Directors</h3>
-              <p className="text-gray-700 mb-4">
-                Our organization is governed by a diverse board of directors comprising experts in research, education, business, and community development. The board provides strategic direction and ensures our work aligns with our mission and values.
-              </p>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-peach-800 mb-4">Advisory Council</h3>
-              <p className="text-gray-700 mb-4">
-                Our advisory council brings together thought leaders from various disciplines to provide insights and guidance on our research agenda, mentorship programs, and business coaching services.
-              </p>
-            </div>
-
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h3 className="text-2xl font-semibold text-peach-800 mb-4">Research Ethics Committee</h3>
-              <p className="text-gray-700">
-                All our research activities are overseen by an independent ethics committee that ensures adherence to the highest ethical standards and protects the rights and welfare of research participants.
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
+              <p className="text-xl text-peach-100 mb-8 leading-relaxed">
+                Ready to collaborate or learn more about our research, mentorship, and coaching services?
               </p>
+
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <FaGlobe className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Address</h3>
+                    <p className="text-peach-100">
+                      105 Eastwood Avenue<br />
+                      Off Lake Bosomtwe Road<br />
+                      Atonsu-Monaco, Kumasi<br />
+                      Ghana
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <FaHandshake className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Contact</h3>
+                    <p className="text-peach-100">
+                      TEL: 0322494556 / 0550102130<br />
+                      EMAIL: info@survey360.org
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold mb-6">Ready to Start?</h3>
+                <p className="text-peach-100 mb-8">
+                  Join us in making a difference through research, mentorship, and strategic business development.
+                </p>
+                <Link
+                  href="/contact"
+                  className="bg-white text-peach-600 hover:bg-peach-50 rounded-lg px-8 py-4 font-bold transition-all duration-300 inline-flex items-center group shadow-lg hover:shadow-xl"
+                >
+                  <span>Contact Us Today</span>
+                  <GoArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Partners Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container-page">
           <div className="text-center mb-16">
-            <span className="text-peach-600 font-medium tracking-wider uppercase text-sm mb-2 inline-block">Collaborators</span>
-            <h2 className="text-peach-900 mb-4 text-3xl md:text-4xl font-serif">Our Partners & Affiliations</h2>
-            <div className="w-20 h-1 bg-peach-500 mx-auto mb-6"></div>
+            <span className="text-peach-600 font-semibold tracking-wider uppercase text-sm mb-2 inline-block">Collaborations</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Academic & Strategic Partners</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-peach-500 to-orange-500 mx-auto mb-6 rounded-full"></div>
             <p className="max-w-2xl mx-auto text-gray-600 text-lg">
-              We collaborate with a diverse range of organizations committed to advancing knowledge and creating positive impact.
+              We collaborate with leading institutions and organizations to advance research and create meaningful impact.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {partners.map((partner, index) => (
-              <div key={index} className="h-32 bg-gray-50 rounded-lg flex flex-col items-center justify-center p-4 hover:shadow-md transition-shadow">
-                <div className="relative w-16 h-12 mb-3 rounded overflow-hidden">
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-peach-600/10"></div>
+              <div key={index} className="group">
+                <div className="h-24 bg-white rounded-2xl flex items-center justify-center p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100">
+                  <div className="relative w-full h-12 rounded overflow-hidden">
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      fill
+                      className="object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
                 </div>
-                <p className="text-gray-700 text-xs text-center leading-tight">{partner.name}</p>
+                <p className="text-gray-700 text-sm text-center mt-3 font-medium">{partner.name}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-peach-700 text-white relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10">
-          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-          </svg>
-        </div>
-        <div className="container-page relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif mb-6">Join Us in Creating Positive Change</h2>
-            <p className="text-xl mx-auto mb-10 text-peach-100 leading-relaxed">
-              Whether you&apos;re interested in partnering with us, participating in our programs, or supporting our mission, we&apos;d love to hear from you.
-            </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-peach-700 hover:bg-peach-50 transition-colors rounded-md px-8 py-4 font-medium inline-block">
-                Contact Our Team
-              </Link>
-              <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white/10 transition-colors rounded-md px-8 py-4 font-medium inline-block">
-                Explore Our Services
-              </Link>
-            </div>
           </div>
         </div>
       </section>
