@@ -208,10 +208,10 @@ const Impact = () => {
           <div className="relative">
             <div className="aspect-[4/3] relative rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=450&fit=crop&crop=center"
+                src="https://images.unsplash.com/photo-1645263012668-a6617115f9b9?w=600&h=450&fit=crop&crop=center"
                 alt="Research team analyzing data for community impact"
                 fill
-                className="object-cover"
+                className="object-cover opacity-80"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 

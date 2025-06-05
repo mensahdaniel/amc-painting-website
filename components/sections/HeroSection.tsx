@@ -98,10 +98,10 @@ const HeroSection = () => {
               {/* Main image container */}
               <div className="absolute inset-8 z-10 shadow-2xl rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-500">
                 <Image
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=800&fit=crop&crop=center"
+                  src="https://images.unsplash.com/photo-1653565685060-e15e492a7fda?w=1200&h=800&fit=crop&crop=center"
                   alt="African research team collaborating on data analysis"
                   fill
-                  className="object-cover"
+                  className="object-cover opacity-75"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-peach-900/40 via-transparent to-transparent"></div>
 

@@ -183,7 +183,7 @@ export default function ServicesPage() {
             <div className="bg-white rounded-lg shadow-xl border-t-4 border-peach-500 hover:shadow-2xl transition-all duration-300 group overflow-hidden">
               <div className="relative h-48 mb-6">
                 <Image
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=center"
+                  src="https://images.unsplash.com/photo-1653565684985-0b1a64cf7afc?w=600&h=400&fit=crop&crop=center"
                   alt="African researchers collaborating on data analysis"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -208,7 +208,7 @@ export default function ServicesPage() {
             <div className="bg-white rounded-lg shadow-xl border-t-4 border-peach-500 hover:shadow-2xl transition-all duration-300 group overflow-hidden">
               <div className="relative h-48 mb-6">
                 <Image
-                  src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop&crop=center"
+                  src="https://plus.unsplash.com/premium_photo-1672997189986-d63938478e56?w=600&h=400&fit=crop&crop=center"
                   alt="African mentor guiding young students in classroom setting"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -332,7 +332,7 @@ export default function ServicesPage() {
               <div className="absolute bottom-0 right-0 w-48 h-48 bg-peach-100 rounded-lg transform translate-x-6 translate-y-6"></div>
               <div className="absolute inset-4 z-10 shadow-xl rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop&crop=center"
+                  src="https://plus.unsplash.com/premium_photo-1672997189986-d63938478e56?w=600&h=400&fit=crop&crop=center"
                   alt="African mentor guiding students in educational setting"
                   fill
                   className="object-cover"

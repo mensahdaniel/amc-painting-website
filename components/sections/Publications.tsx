@@ -100,12 +100,12 @@ const Publications = () => {
             <FaBookOpen className="w-4 h-4 mr-2 text-peach-500" />
             Knowledge Sharing
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-peach-600 to-orange-600">Research</span>
             <br />Publications
           </h2>
-          
+
           <p className="max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed">
             Stay informed with our recent research publications and insights from our team of experts, contributing to evidence-based policy and sustainable development.
           </p>
@@ -131,21 +131,21 @@ const Publications = () => {
         {/* Featured Publications */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Publications</h3>
-          
+
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             {featuredPublications.filter(pub => pub.featured).map((publication, index) => (
               <div key={index} className="group">
                 <div className="bg-white/90 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 group-hover:scale-105">
                   {/* Image */}
                   <div className="aspect-[16/10] relative overflow-hidden">
-                    <Image 
+                    <Image
                       src={publication.image}
                       alt={publication.title}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                    
+
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-peach-700 font-semibold text-sm">
                       {publication.category}
@@ -157,7 +157,7 @@ const Publications = () => {
                     <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-peach-600 transition-colors">
                       {publication.title}
                     </h4>
-                    
+
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {publication.description}
                     </p>
@@ -190,14 +190,14 @@ const Publications = () => {
 
                     {/* Actions */}
                     <div className="flex flex-wrap gap-3">
-                      <Link 
+                      <Link
                         href={publication.downloadUrl}
                         className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-peach-500 to-orange-500 text-white font-semibold rounded-lg hover:from-peach-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl group/btn"
                       >
                         <FaDownload className="w-4 h-4 mr-2" />
                         <span>Download PDF</span>
                       </Link>
-                      <Link 
+                      <Link
                         href={publication.externalUrl}
                         className="inline-flex items-center px-4 py-2 bg-white border-2 border-peach-300 text-peach-600 font-semibold rounded-lg hover:bg-peach-50 transition-all duration-300"
                       >
@@ -215,7 +215,7 @@ const Publications = () => {
         {/* Recent Publications Grid */}
         <div>
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Recent Publications</h3>
-          
+
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {featuredPublications.filter(pub => !pub.featured).map((publication, index) => (
               <div key={index} className="group">
@@ -223,7 +223,7 @@ const Publications = () => {
                   <div className="flex items-start space-x-4">
                     {/* Thumbnail */}
                     <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 relative">
-                      <Image 
+                      <Image
                         src={publication.image}
                         alt={publication.title}
                         fill
@@ -238,11 +238,11 @@ const Publications = () => {
                         {publication.title}
                       </h4>
                       <p className="text-gray-600 text-sm mb-3 leading-relaxed">
-                        {publication.description.length > 120 
-                          ? `${publication.description.substring(0, 120)}...` 
+                        {publication.description.length > 120
+                          ? `${publication.description.substring(0, 120)}...`
                           : publication.description}
                       </p>
-                      
+
                       {/* Meta */}
                       <div className="flex items-center text-xs text-gray-500 mb-4">
                         <span>{publication.author}</span>
@@ -252,14 +252,14 @@ const Publications = () => {
 
                       {/* Actions */}
                       <div className="flex gap-2">
-                        <Link 
+                        <Link
                           href={publication.downloadUrl}
                           className="text-peach-600 hover:text-peach-700 font-medium text-sm inline-flex items-center"
                         >
                           <FaDownload className="w-3 h-3 mr-1" />
                           Download
                         </Link>
-                        <Link 
+                        <Link
                           href={publication.externalUrl}
                           className="text-gray-500 hover:text-gray-700 font-medium text-sm inline-flex items-center ml-4"
                         >
@@ -285,14 +285,14 @@ const Publications = () => {
               Access our full collection of research publications, policy papers, and insights that are driving positive change across Africa and beyond.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 href="/resources"
                 className="bg-gradient-to-r from-peach-600 to-orange-600 text-white hover:from-peach-700 hover:to-orange-700 rounded-xl px-8 py-4 font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-105 group"
               >
                 <span>Browse All Publications</span>
                 <GoArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
+              <Link
                 href="/contact"
                 className="bg-white border-2 border-peach-300 text-peach-600 hover:bg-peach-50 rounded-xl px-8 py-4 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
               >
