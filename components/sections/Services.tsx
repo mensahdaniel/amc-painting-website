@@ -13,8 +13,8 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=center",
       icon: <FaChartLine className="w-8 h-8" />,
       href: "/services/research",
-      gradient: "from-blue-500 to-peach-500",
-      bgGradient: "from-blue-50 to-peach-50"
+      gradient: "from-peach-600 to-peach-400",
+      bgGradient: "from-peach-50 to-peach-50"
     },
     {
       title: "Mentorship Programs",
@@ -23,7 +23,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop&crop=center",
       icon: <FaUsers className="w-8 h-8" />,
       href: "/services/mentorship",
-      gradient: "from-green-500 to-peach-500",
+      gradient: "from-peach-600 to-peach-400",
       bgGradient: "from-green-50 to-peach-50"
     },
     {
@@ -33,7 +33,7 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1664575600796-ffa828c5cb6e?w=600&h=400&fit=crop&crop=center",
       icon: <FaBriefcase className="w-8 h-8" />,
       href: "/services/coaching",
-      gradient: "from-purple-500 to-peach-500",
+      gradient: "from-peach-600 to-peach-400",
       bgGradient: "from-purple-50 to-peach-50"
     }
   ];

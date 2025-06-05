@@ -167,7 +167,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Overview */}
-      <section id="services-overview" className="py-20 bg-white">
+      <section id="overview" className="py-20 bg-white">
         <div className="container-page">
           <div className="text-center mb-16">
             <span className="text-peach-600 font-medium tracking-wider uppercase text-sm mb-2 inline-block">What We Offer</span>
@@ -497,7 +497,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-20 bg-peach-50">
+      {/* <section className="py-20 bg-peach-50">
         <div className="container-page">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -557,7 +557,7 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-peach-700 text-white relative overflow-hidden">

@@ -2,9 +2,9 @@
 import HeroSection from "@/components/sections/HeroSection";
 import Services from "@/components/sections/Services";
 import Impact from "@/components/sections/Impact";
-import Testimonials from "@/components/sections/Testimonials";
+// import Testimonials from "@/components/sections/Testimonials";
 import CTASection from "@/components/sections/CTASection";
-import Publications from "@/components/sections/Publications";
+// import Publications from "@/components/sections/Publications";
 
 export default function Home() {
   return (
@@ -19,13 +19,13 @@ export default function Home() {
       <Impact />
 
       {/* Testimonial section */}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* CTA section */}
       <CTASection />
 
       {/* Latest Publications */}
-      <Publications />
+      {/* <Publications /> */}
     </>
   );
 }

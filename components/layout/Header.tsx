@@ -33,6 +33,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex items-center space-x-8">
+            <li><Link href="/" className="font-medium hover:text-primary transition-colors py-2">Home</Link></li>
             <li><Link href="/about" className="font-medium hover:text-primary transition-colors py-2">About</Link></li>
             <li>
               <Link href="/services" className="font-medium hover:text-primary transition-colors py-2 flex items-center">
@@ -64,16 +65,7 @@ const Header = () => {
               <ul className="space-y-6 text-lg">
                 <li><Link href="/" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
                 <li><Link href="/about" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link></li>
-                <li>
-                  <p className="block py-2 font-medium mb-2">Services</p>
-                  <ul className="pl-4 space-y-3">
-                    <li><Link href="/services/research" className="block py-1" onClick={() => setMobileMenuOpen(false)}>Research Services</Link></li>
-                    <li><Link href="/services/mentorship" className="block py-1" onClick={() => setMobileMenuOpen(false)}>Mentorship Programs</Link></li>
-                    <li><Link href="/services/coaching" className="block py-1" onClick={() => setMobileMenuOpen(false)}>Business Coaching</Link></li>
-                  </ul>
-                </li>
-                <li><Link href="/projects" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>Projects</Link></li>
-                <li><Link href="/resources" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>Resources</Link></li>
+                <li><Link href="/services" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link></li>
                 <li><Link href="/contact" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>Contact</Link></li>
                 <li><Link href="/contact" className="inline-flex items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-opacity-90 transition-colors" onClick={() => setMobileMenuOpen(false)}>Get Started</Link></li>
               </ul>

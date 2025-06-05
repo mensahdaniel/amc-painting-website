@@ -11,9 +11,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: "Research Services", href: "/services/research", icon: <FaChartLine className="w-4 h-4" /> },
-    { name: "Mentorship Programs", href: "/services/mentorship", icon: <FaUsers className="w-4 h-4" /> },
-    { name: "Business Coaching", href: "/services/coaching", icon: <FaBriefcase className="w-4 h-4" /> }
+    { name: "Research Services", href: "/services#overview", icon: <FaChartLine className="w-4 h-4" /> },
+    { name: "Mentorship Programs", href: "/services#overview", icon: <FaUsers className="w-4 h-4" /> },
+    { name: "Business Coaching", href: "/services#overview", icon: <FaBriefcase className="w-4 h-4" /> }
   ];
 
   const quickLinks = [

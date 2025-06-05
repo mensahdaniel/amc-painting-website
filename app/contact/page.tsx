@@ -1,7 +1,8 @@
+"use client";
+
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import { Metadata } from "next";
 import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,14 +10,12 @@ import { FiFacebook } from "react-icons/fi";
 import { HiSparkles } from "react-icons/hi";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaClock, FaHandshake, FaRocket } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
+import { useContactForm } from "@/lib/hooks/useContactForm";
 
-export const metadata: Metadata = {
-  title: "Contact Us | Survey 360 Research Solutions",
-  description: "Get in touch with Survey 360 Research Solutions for inquiries about our research services, mentorship programs, and business coaching.",
-  keywords: ["contact", "research inquiries", "mentorship", "business coaching", "survey 360"],
-};
+// Note: metadata is handled in layout.tsx for client components
 
 export default function ContactPage() {
+  const { formData, isLoading, handleInputChange, handleSubmit } = useContactForm();
   // const contactMethods = [
   //   {
   //     icon: <FaMapMarkerAlt className="w-8 h-8" />,
@@ -182,7 +181,7 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <form className="space-y-8">
+                <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block mb-3 font-semibold text-gray-800">Full Name *</label>
@@ -190,6 +189,8 @@ export default function ContactPage() {
                         type="text"
                         placeholder="Enter your full name"
                         className="h-14 rounded-xl border-gray-200 focus:border-peach-500 focus:ring-peach-500"
+                        value={formData.name}
+                        onChange={(e) => handleInputChange('name', e.target.value)}
                         required
                       />
                     </div>
@@ -199,6 +200,8 @@ export default function ContactPage() {
                         type="email"
                         placeholder="Enter your email address"
                         className="h-14 rounded-xl border-gray-200 focus:border-peach-500 focus:ring-peach-500"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
                         required
                       />
                     </div>
@@ -211,6 +214,8 @@ export default function ContactPage() {
                         type="tel"
                         placeholder="Enter your phone number"
                         className="h-14 rounded-xl border-gray-200 focus:border-peach-500 focus:ring-peach-500"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
                       />
                     </div>
                     <div>
@@ -219,13 +224,19 @@ export default function ContactPage() {
                         type="text"
                         placeholder="Your organization name"
                         className="h-14 rounded-xl border-gray-200 focus:border-peach-500 focus:ring-peach-500"
+                        value={formData.organization}
+                        onChange={(e) => handleInputChange('organization', e.target.value)}
                       />
                     </div>
                   </div>
 
                   <div>
                     <label className="block mb-3 font-semibold text-gray-800">Service Interest</label>
-                    <select className="w-full h-14 rounded-xl border border-gray-200 focus:border-peach-500 focus:ring-peach-500 px-4 bg-white">
+                    <select
+                      className="w-full h-14 rounded-xl border border-gray-200 focus:border-peach-500 focus:ring-peach-500 px-4 bg-white"
+                      value={formData.serviceInterest}
+                      onChange={(e) => handleInputChange('serviceInterest', e.target.value)}
+                    >
                       <option value="">Select a service</option>
                       <option value="research">Research Services</option>
                       <option value="mentorship">Mentorship Programs</option>
@@ -240,6 +251,8 @@ export default function ContactPage() {
                       type="text"
                       placeholder="Brief subject of your inquiry"
                       className="h-14 rounded-xl border-gray-200 focus:border-peach-500 focus:ring-peach-500"
+                      value={formData.subject}
+                      onChange={(e) => handleInputChange('subject', e.target.value)}
                       required
                     />
                   </div>
@@ -249,16 +262,28 @@ export default function ContactPage() {
                     <Textarea
                       placeholder="Tell us about your project or inquiry in detail..."
                       className="min-h-32 rounded-xl border-gray-200 focus:border-peach-500 focus:ring-peach-500 resize-none"
+                      value={formData.message}
+                      onChange={(e) => handleInputChange('message', e.target.value)}
                       required
                     />
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full h-14 bg-gradient-to-r from-peach-600 to-orange-600 hover:from-peach-700 hover:to-orange-700 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    disabled={isLoading}
+                    className="w-full h-14 bg-gradient-to-r from-peach-600 to-orange-600 hover:from-peach-700 hover:to-orange-700 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message
-                    <GoArrowRight className="ml-2 w-5 h-5" />
+                    {isLoading ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <GoArrowRight className="ml-2 w-5 h-5" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </div>
@@ -323,28 +348,28 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Connect With Us</h3>
                 <div className="flex space-x-4">
                   <Link
-                    href="https://twitter.com"
+                    href="#"
                     className="w-12 h-12 bg-gradient-to-r from-peach-500 to-peach-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
                     aria-label="Twitter"
                   >
                     <FaXTwitter className="h-5 w-5 text-white" />
                   </Link>
                   <Link
-                    href="https://linkedin.com"
+                    href="#"
                     className="w-12 h-12 bg-gradient-to-r from-peach-500 to-peach-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
                     aria-label="LinkedIn"
                   >
                     <FaLinkedin className="h-5 w-5 text-white" />
                   </Link>
                   <Link
-                    href="https://facebook.com"
+                    href="#"
                     className="w-12 h-12 bg-gradient-to-r from-peach-500 to-peach-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
                     aria-label="Facebook"
                   >
                     <FiFacebook className="h-5 w-5 text-white" />
                   </Link>
                   <Link
-                    href="https://instagram.com"
+                    href="#"
                     className="w-12 h-12 bg-gradient-to-r from-peach-500 to-peach-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg"
                     aria-label="Instagram"
                   >

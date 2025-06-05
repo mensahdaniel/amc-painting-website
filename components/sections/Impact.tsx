@@ -11,7 +11,7 @@ const Impact = () => {
       label: "Research Publications",
       description: "High-impact studies published in prestigious journals",
       icon: <FaChartLine className="w-8 h-8" />,
-      gradient: "from-blue-500 to-peach-500",
+      gradient: "from-peach-600/20 to-peach-400/80",
       bgGradient: "from-blue-50 to-peach-50"
     },
     {
@@ -19,7 +19,7 @@ const Impact = () => {
       label: "Lives Transformed",
       description: "Individuals empowered through our mentorship programs",
       icon: <FaUsers className="w-8 h-8" />,
-      gradient: "from-green-500 to-peach-500",
+      gradient: "from-peach-600/20 to-peach-400/80",
       bgGradient: "from-green-50 to-peach-50"
     },
     {
@@ -27,7 +27,7 @@ const Impact = () => {
       label: "Strategic Partnerships",
       description: "Collaborations with leading institutions worldwide",
       icon: <FaHandshake className="w-8 h-8" />,
-      gradient: "from-purple-500 to-peach-500",
+      gradient: "from-peach-600/20 to-peach-400/80",
       bgGradient: "from-purple-50 to-peach-50"
     },
     {
@@ -35,7 +35,7 @@ const Impact = () => {
       label: "Policy Contributions",
       description: "Research-driven policy recommendations implemented",
       icon: <FaGlobe className="w-8 h-8" />,
-      gradient: "from-indigo-500 to-peach-500",
+      gradient: "from-peach-600/20 to-peach-400/80",
       bgGradient: "from-indigo-50 to-peach-50"
     }
   ];
@@ -45,19 +45,19 @@ const Impact = () => {
       title: "Academic Excellence",
       description: "50+ peer-reviewed publications in top-tier journals including Emerald, Elsevier, Sage, and Taylor & Francis",
       icon: <FaAward className="w-6 h-6" />,
-      color: "text-blue-600"
+      color: "text-peach-600"
     },
     {
       title: "Global Recognition",
       description: "International partnerships with universities in Ghana, UK, Germany, and Malaysia",
       icon: <FaGlobe className="w-6 h-6" />,
-      color: "text-green-600"
+      color: "text-peach-600"
     },
     {
       title: "Innovation Leadership",
       description: "Pioneering research methodologies in adult education and human resource development",
       icon: <FaRocket className="w-6 h-6" />,
-      color: "text-purple-600"
+      color: "text-peach-600"
     },
     {
       title: "Community Impact",
@@ -72,18 +72,18 @@ const Impact = () => {
       {/* Dynamic Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-peach-900 to-orange-900"></div>
       <div className="absolute inset-0 opacity-20">
-        <Image 
+        <Image
           src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1200&h=800&fit=crop&crop=center"
           alt="African community development and growth"
           fill
           className="object-cover"
         />
       </div>
-      
+
       {/* Overlay pattern */}
-      <div className="absolute inset-0 opacity-10" style={{ 
-        backgroundImage: 'radial-gradient(circle at 25% 25%, #ffffff 2px, transparent 2px), radial-gradient(circle at 75% 75%, #ffffff 1px, transparent 1px)', 
-        backgroundSize: '50px 50px, 25px 25px' 
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: 'radial-gradient(circle at 25% 25%, #ffffff 2px, transparent 2px), radial-gradient(circle at 75% 75%, #ffffff 1px, transparent 1px)',
+        backgroundSize: '50px 50px, 25px 25px'
       }}></div>
 
       {/* Floating elements */}
@@ -97,12 +97,12 @@ const Impact = () => {
             <HiSparkles className="w-4 h-4 mr-2 text-peach-300" />
             Making A Difference
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-peach-300 to-orange-300">Measurable</span>
             <br />Impact
           </h2>
-          
+
           <p className="max-w-3xl mx-auto text-xl text-gray-200 leading-relaxed">
             At Survey 360 Research, we measure our success by the positive change we create in communities and organizations worldwide through evidence-based research and strategic partnerships.
           </p>
@@ -171,7 +171,7 @@ const Impact = () => {
             <p className="text-xl text-gray-200 mb-8 leading-relaxed">
               Our research doesn&apos;t just inform policy—it transforms lives. From empowering young researchers to helping SMEs achieve sustainable growth, every project creates ripple effects of positive change.
             </p>
-            
+
             <div className="space-y-6 mb-8">
               <div className="flex items-start space-x-4">
                 <div className="w-3 h-3 bg-peach-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -181,14 +181,14 @@ const Impact = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-3 h-3 bg-peach-400 rounded-full mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-1">Mentorship Success</h4>
                   <p className="text-gray-300">500+ individuals empowered with career guidance and skills</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-3 h-3 bg-peach-400 rounded-full mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-1">Business Growth</h4>
                   <p className="text-gray-300">SMEs achieving 200%+ growth through strategic coaching</p>
@@ -196,7 +196,7 @@ const Impact = () => {
               </div>
             </div>
 
-            <Link 
+            <Link
               href="/about"
               className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-peach-500 to-orange-500 text-white font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
@@ -214,7 +214,7 @@ const Impact = () => {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-              
+
               {/* Floating success metric */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-white/20">
                 <div className="flex items-center justify-between">
@@ -222,7 +222,7 @@ const Impact = () => {
                     <div className="text-2xl font-bold text-gray-900">95%</div>
                     <div className="text-sm text-gray-600">Success Rate</div>
                   </div>
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-peach-500 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-peach-600/20 to-peach-500 rounded-xl flex items-center justify-center">
                     <HiTrendingUp className="w-6 h-6 text-white" />
                   </div>
                 </div>
