@@ -46,7 +46,17 @@ export default function AboutPage() {
       specializations: ["Human Resource Management", "Audit & Compliance", "Organizational Development"],
       education: ["MSc. in Management and Human Resource Strategy - KNUST", "BBA in Human Resource Management - University of Ghana"],
       experience: "15+ years across Ghana Education Service, Ghana Police Service, and Ghana Revenue Authority"
+    },
+    {
+      name: "Gladys Kissiwaa Yeboah",
+      role: "Administrative Secretary",
+      bio: "Bachelor of Arts in English at the Baptist University, Kumasi.",
+      image: "/images/team/gladys.png",
+      specializations: ["Administrative Management", "Event Planning", "Customer Service"],
+      education: ["Bachelor of Arts in English - Baptist University, Kumasi"],
+      experience: "5+ years in administrative roles at various organizations"
     }
+
   ];
 
   const values = [
@@ -89,12 +99,12 @@ export default function AboutPage() {
   ];
 
   const partners = [
-    { name: "University of Ghana", logo: "https://images.unsplash.com/photo-1562774053-701939374585?w=100&h=80&fit=crop&crop=center" },
-    { name: "KNUST", logo: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=100&h=80&fit=crop&crop=center" },
-    { name: "Coventry University", logo: "https://images.unsplash.com/photo-1568792923760-d70635a89fdc?w=100&h=80&fit=crop&crop=center" },
-    { name: "University Malaysia", logo: "https://images.unsplash.com/photo-1591040248420-3066d1c1b4d3?w=100&h=80&fit=crop&crop=center" },
-    { name: "GIMPA", logo: "https://images.unsplash.com/photo-1574932142425-67da20c5b6ba?w=100&h=80&fit=crop&crop=center" },
-    { name: "Ghana Education Service", logo: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=100&h=80&fit=crop&crop=center" }
+    { name: "University of Ghana", logo: "/images/partners/UG.png" },
+    { name: "KNUST", logo: "/images/partners/KNUST.jpg" },
+    { name: "Coventry University", logo: "/images/partners/Coventry.jpg" },
+    { name: "University Malaysia", logo: "/images/partners/UM.jpg" },
+    { name: "GIMPA", logo: "/images/partners/GIMPA.jpg" },
+    { name: "Ghana Education Service", logo: "/images/partners/MEG.jpg" }
   ];
 
   const milestones = [
@@ -237,61 +247,96 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-6 lg:gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-gray-100">
-                <div className="h-80 relative overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover transition-all duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div key={index} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-100 hover:border-peach-200 hover:-translate-y-1">
+                {/* Header with Image and Basic Info */}
+                <div className="flex items-center p-4 sm:p-6 border-b border-gray-100 group-hover:bg-gradient-to-r group-hover:from-peach-50 group-hover:to-orange-50 transition-all duration-300">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 relative overflow-hidden rounded-xl flex-shrink-0 mr-3 sm:mr-4 ring-2 ring-transparent group-hover:ring-peach-200 transition-all duration-300">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover transition-all duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 truncate group-hover:text-peach-700 transition-colors duration-300">{member.name}</h3>
+                    <p className="text-peach-600 font-semibold text-xs sm:text-sm leading-tight">{member.role}</p>
+                  </div>
                 </div>
 
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-peach-600 font-semibold mb-4">{member.role}</p>
+                {/* Content */}
+                <div className="p-4 sm:p-6 space-y-4">
+                  {/* Key Highlights */}
+                  <div className="space-y-2">
+                    {member.publications && (
+                      <div className="flex items-start space-x-2 p-2 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 border border-green-100">
+                        <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <p className="text-xs sm:text-sm text-gray-700 font-medium">{member.publications}</p>
+                      </div>
+                    )}
+                    {member.experience && (
+                      <div className="flex items-start space-x-2 p-2 rounded-lg bg-gradient-to-r from-blue-50 to-sky-50 border border-blue-100">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <p className="text-xs sm:text-sm text-gray-700 font-medium">{member.experience}</p>
+                      </div>
+                    )}
+                  </div>
 
-                  {member.publications && (
-                    <div className="mb-4 p-3 bg-gradient-to-r from-green-50 to-peach-50 rounded-lg">
-                      <p className="text-sm text-gray-700 font-medium">{member.publications}</p>
-                    </div>
-                  )}
+                  {/* Bio - Truncated */}
+                  <div className="bg-gray-50 rounded-lg p-3 border border-gray-100">
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                      {member.bio.length > 120 ? `${member.bio.substring(0, 120)}...` : member.bio}
+                    </p>
+                  </div>
 
-                  {member.experience && (
-                    <div className="mb-4 p-3 bg-gradient-to-r from-blue-50 to-peach-50 rounded-lg">
-                      <p className="text-sm text-gray-700 font-medium">{member.experience}</p>
-                    </div>
-                  )}
-
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6">{member.bio}</p>
-
+                  {/* Specializations */}
                   {member.specializations && (
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Specializations:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {member.specializations.map((spec, specIndex) => (
-                          <span key={specIndex} className="px-3 py-1 bg-peach-100 text-peach-700 text-xs rounded-full font-medium">
+                    <div>
+                      <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="w-1 h-4 bg-peach-500 rounded-full mr-2"></div>
+                        Specializations
+                      </h4>
+                      <div className="flex flex-wrap gap-1">
+                        {member.specializations.slice(0, 3).map((spec, specIndex) => (
+                          <span key={specIndex} className="px-2 py-1 bg-peach-100 text-peach-700 text-xs rounded-md font-medium hover:bg-peach-200 transition-colors duration-200">
                             {spec}
                           </span>
                         ))}
+                        {member.specializations.length > 3 && (
+                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-md font-medium">
+                            +{member.specializations.length - 3} more
+                          </span>
+                        )}
                       </div>
                     </div>
                   )}
 
+                  {/* Top Education */}
                   {member.education && (
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2 flex items-center">
-                        <HiAcademicCap className="w-4 h-4 mr-1" />
-                        Key Education:
+                      <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2 flex items-center">
+                        <HiAcademicCap className="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-peach-500" />
+                        Education
                       </h4>
-                      <ul className="space-y-1">
-                        {member.education.map((edu, eduIndex) => (
-                          <li key={eduIndex} className="text-xs text-gray-600 leading-relaxed">• {edu}</li>
-                        ))}
-                      </ul>
+                      <div className="text-xs text-gray-600 leading-relaxed bg-gradient-to-r from-gray-50 to-peach-50 p-2 rounded-lg border border-gray-100">
+                        <div className="flex items-start space-x-2">
+                          <div className="w-1 h-1 bg-peach-400 rounded-full mt-2 flex-shrink-0"></div>
+                          <span>{member.education[0]}</span>
+                        </div>
+                        {member.education.length > 1 && (
+                          <div className="flex items-start space-x-2 mt-1">
+                            <div className="w-1 h-1 bg-peach-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span>{member.education[1]}</span>
+                          </div>
+                        )}
+                        {member.education.length > 2 && (
+                          <div className="text-gray-500 text-xs mt-1 ml-3 font-medium">
+                            +{member.education.length - 2} more qualification{member.education.length > 3 ? 's' : ''}
+                          </div>
+                        )}
+                      </div>
                     </div>
                   )}
                 </div>
