@@ -67,28 +67,28 @@ const Footer = () => {
             {/* Social Media */}
             <div className="flex space-x-4">
               <Link
-                href="https://twitter.com"
+                href="#"
                 className="group w-12 h-12 bg-white/10 hover:bg-peach-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
                 aria-label="Twitter"
               >
                 <FaXTwitter className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="#"
                 className="group w-12 h-12 bg-white/10 hover:bg-peach-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </Link>
               <Link
-                href="https://facebook.com"
+                href="#"
                 className="group w-12 h-12 bg-white/10 hover:bg-peach-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
                 aria-label="Facebook"
               >
                 <FiFacebook className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors" />
               </Link>
               <Link
-                href="https://instagram.com"
+                href="#"
                 className="group w-12 h-12 bg-white/10 hover:bg-peach-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
                 aria-label="Instagram"
               >
