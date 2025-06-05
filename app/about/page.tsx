@@ -226,7 +226,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white">
+      <section id="team" className="py-20 bg-white">
         <div className="container-page">
           <div className="text-center mb-16">
             <span className="text-peach-600 font-semibold tracking-wider uppercase text-sm mb-2 inline-block">Our Team</span>
