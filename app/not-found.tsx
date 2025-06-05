@@ -113,9 +113,9 @@ export default function NotFound() {
 
           {/* Help Section */}
           <div className="bg-gradient-to-r from-peach-600 to-orange-600 rounded-3xl p-8 text-white shadow-2xl">
-            <h3 className="text-2xl font-bold mb-4">Still Can't Find What You're Looking For?</h3>
+            <h3 className="text-2xl font-bold mb-4">Still Can&apos;t Find What You&apos;re Looking For?</h3>
             <p className="text-peach-100 mb-6 text-lg">
-              Our team at Survey 360 Research Solutions is here to help. Contact us directly and we'll assist you in finding the information you need.
+              Our team at Survey 360 Research Solutions is here to help. Contact us directly and we&apos;ll assist you in finding the information you need.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
