@@ -32,7 +32,7 @@ export default function AboutPage() {
     {
       name: "Dr. Michael Karikari Appiah",
       role: "Director of Operations",
-      bio: "As an accomplished Scholar, Dr. Karikari obtained his Doctor of Philosophy (Ph. D) Degree from the University Malaysia, Terengganu, a Master of Science (MSc.) from Coventry University (United Kingdom), a Commonwealth Executive Master's in Public Administration (CEMPA) from KNUST, Post Graduate Diploma from GIMPA, and a Bachelor of Art Degree from the University for Development Studies (UDS, Tamale).",
+      bio: "As an accomplished Scholar, Dr. Karikari obtained his Doctor of Philosophy (Ph. D) Degree from the University of Malaysia, Terengganu, a Master of Science (MSc.) from Coventry University (United Kingdom), a Commonwealth Executive Master's in Public Administration (CEMPA) from KNUST, Post Graduate Diploma from GIMPA, and a Bachelor of Art Degree from the University for Development Studies (UDS, Tamale).",
       image: "/images/team/michael.png",
       specializations: ["Public Administration", "Research Management", "Academic Publishing"],
       education: ["Ph.D. - University Malaysia, Terengganu", "MSc. - Coventry University (UK)", "CEMPA - KNUST"],
