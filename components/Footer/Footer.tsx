@@ -1,3 +1,5 @@
+import Link from 'next/link'; // <-- ADD THIS LINE BACK
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -14,12 +16,12 @@ const Footer = () => {
           <div className="text-center md:text-right">
             <p className="text-xs text-gray-500">
               Built with passion by {' '}
-              <a // <-- CHANGE TO REGULAR <a> TAG
+              <Link
                 href="mailto:mensahdaniel5858910@gmail.com"
                 className="text-blue-400 hover:text-blue-300 underline transition-colors"
               >
                 Mensah Daniel
-              </a> // <-- CHANGE TO REGULAR </a> TAG
+              </Link>
               {' '}•{' '}
               <span className="text-gray-500">
                 Full-Stack Developer
