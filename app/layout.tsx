@@ -1,25 +1,10 @@
+import Footer from '../components/Footer/Footer';
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import { Toaster } from "@/components/ui/sonner";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
-  title: "Survey 360 Research Solutions",
-  description: "Advancing knowledge through evidence-based research, mentorship, and business coaching.",
-  keywords: ["research", "mentorship", "business coaching", "non-profit", "survey 360"],
-  authors: [{ name: "Survey 360 Research Solutions" }],
+  title: "AMC Company Limited",
+  description: "Professional Residential & Commercial Painting Services",
 };
 
 export default function RootLayout({
@@ -28,19 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
-      >
-        <Header />
-
-        <main className="flex-grow">
-          {children}
-        </main>
-
-        <Footer />
-        <Toaster position="top-right" />
-      </body>
+    <html lang="en">
+        <body>
+    {children}
+    <Footer />
+  </body>
     </html>
   );
 }
