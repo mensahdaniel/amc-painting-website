@@ -24,7 +24,7 @@ const Testimonials = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
           <p className="text-lg text-gray-600">
-            Don't just take our word for it. Here's what our clients have to say about their experience with us.
+            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience with us.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
               {/* Quote */}
-              <p className="text-gray-600 italic mb-6">"{testimonial.quote}"</p>
+              <p className="text-gray-600 italic mb-6">&quot;{testimonial.quote}&quot;</p>
               {/* Author */}
               <div>
                 <p className="font-semibold text-gray-900">{testimonial.author}</p>
