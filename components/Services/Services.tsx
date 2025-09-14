@@ -3,32 +3,32 @@ const Services = () => {
     {
       title: 'Interior Painting',
       description: 'Transform the inside of your home with our expert interior painting services, using durable and beautiful finishes.',
-      icon: '🎨', // Placeholder emoji
+      image: '/images/services/interior.jpg', // Updated to actual image
     },
     {
       title: 'Exterior Painting',
-      description: 'Protect and beautify your home’s exterior with our weather-resistant and long-lasting paint solutions.',
-      icon: '🏠', // Placeholder emoji
+      description: 'Protect and beautify your home\'s exterior with our weather-resistant and long-lasting paint solutions.',
+      image: '/images/services/exterior.jpg', // Updated to actual image
     },
     {
       title: 'Cabinet Painting',
       description: 'Give your kitchen or bathroom a fresh new look without the cost of full replacement with our cabinet refinishing.',
-      icon: '🗄️', // Placeholder emoji
+      image: '/images/services/cabinet-painting.jpg', // Updated to actual image
     },
     {
       title: 'Drywall Repair',
       description: 'We fix cracks, holes, and imperfections to create a smooth, perfect surface for painting.',
-      icon: '🔧', // Placeholder emoji
+      image: '/images/services/drywall.jpg', // Updated to actual image
     },
     {
       title: 'Deck Staining',
       description: 'Enhance and protect your wooden deck with our professional staining and sealing services.',
-      icon: '🌲', // Placeholder emoji
+      image: '/images/services/deck.jpg', // Updated to actual image
     },
     {
       title: 'Commercial Painting',
       description: 'We provide efficient and high-quality painting services for businesses and commercial properties.',
-      icon: '🏢', // Placeholder emoji
+      image: '/images/services/commercial.jpg', // Updated to actual image
     },
   ];
 
@@ -47,8 +47,17 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4">{service.icon}</div>
+              {/* Image - Replaced emoji */}
+              <div className="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Title */}
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+              {/* Description - unchanged */}
               <p className="text-gray-600">{service.description}</p>
             </div>
           ))}
@@ -58,4 +67,4 @@ const Services = () => {
   );
 };
 
-export default Services; // <--- THIS LINE IS THE MOST IMPORTANT PART
+export default Services;
